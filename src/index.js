@@ -21,8 +21,11 @@ const routes = {
 };
 
 function routeByHosts(host) {
+  console.log('host name:', host)
   if (host in routes) {
-    return routes[host];
+    const targetHost = routes[host]
+    console.log('targetHost:', targetHost)
+    return targetHost;
   }
   if (MODE == "debug") {
     return TARGET_UPSTREAM;
